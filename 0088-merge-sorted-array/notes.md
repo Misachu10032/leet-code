@@ -1,8 +1,4 @@
-# 1. Two Sum
-
-**Difficulty:** Easy
-**Topics:** Array
-
+Two Pointers
 ## Complexity
 
 - Time: O(n)

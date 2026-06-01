@@ -1,12 +1,4 @@
-# 1. Two Sum
 
-**Difficulty:** Easy
-**Topics:** Array
-
-## Complexity
-
-- Time: O(n)
-- Space: O(1)
 
 ## Follow-ups / gotchas
 
