@@ -1,10 +1,3 @@
-"""
-LeetCode 0001 - Two Sum
-https://leetcode.com/problems/two-sum/
-
-Time:  O(n)
-Space: O(n)
-"""
 
 from typing import List
 
