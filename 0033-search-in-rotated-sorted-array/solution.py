@@ -1,0 +1,34 @@
+"""
+LeetCode 0033 - Search in Rotated Sorted Array
+https://leetcode.com/problems/search-in-rotated-sorted-array/
+
+Time:  O(log n)
+Space: O(1)
+"""
+
+
+class Solution:
+    def search(self, nums: list[int], target: int) -> int:
+        lo, hi = 0, len(nums) - 1
+        while lo <= hi:
+            mid = (lo + hi) // 2
+            if nums[mid] == target:
+                return mid
+            if nums[lo] <= nums[mid]:
+                if nums[lo] <= target < nums[mid]:
+                    hi = mid - 1
+                else:
+                    lo = mid + 1
+            else:
+                if nums[mid] < target <= nums[hi]:
+                    lo = mid + 1
+                else:
+                    hi = mid - 1
+        return -1
+
+
+if __name__ == "__main__":
+    sol = Solution()
+    print(sol.search([4, 5, 6, 7, 0, 1, 2], 0))  # 4
+    print(sol.search([4, 5, 6, 7, 0, 1, 2], 3))  # -1
+    print(sol.search([1], 0))  # -1
